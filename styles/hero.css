@@ -1,0 +1,22 @@
+#hero {
+  text-align: center;
+
+  & div {
+    max-width: 41.5rem;
+  }
+  
+  & h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-title);
+    margin-bottom: 1rem;
+    max-width: 41.5rem;
+  }
+
+  & p {
+    font-size: 1.25rem;
+    color: var(--text-body);
+    margin-bottom: 2rem;
+    max-width: 41.5rem;
+  }
+}
