@@ -1,0 +1,93 @@
+#subscriptions {
+  text-align: center;
+  & h2 {
+    color: var(--text-text-title, #f8fbfb);
+    text-align: center;
+
+    font-family: var(--ff-sans);
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  & .cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+  }
+
+  & .card {
+    width: 288px;
+    height: 416px;
+    padding: 0px 32px 28px 32px;
+
+    border-radius: 24px;
+    border: 1px solid var(--shape-stroke);
+    background: var(--shape-base);
+
+    & div:nth-child(2) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & h3 {
+        color: var(--pink-light);
+
+        font-family: var(--ff-sans);
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      & span {
+        display: flex;
+        padding: 9px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        border-radius: 999px;
+        background: var(--shape-stroke);
+      }
+    }
+
+    & div:nth-child(3) {
+      text-align: left;
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 70px;
+
+      & div {
+        & h2 {
+          font-size: 40px;
+          text-align: left;
+        }
+
+        & span {
+          font-size: 16px;
+          font-weight: 700;
+        }
+      }
+
+      & p {
+        color: var(--text-label);
+        font-family: var(--ff-sans);
+        font-size: 14px;
+
+        font-weight: 400;
+        line-height: 140%;
+
+        margin-top: 8px;
+      }
+    }
+
+    & div:nth-child(4) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & img{
+        height: 48px;
+      }
+
+    }
+  }
+}
