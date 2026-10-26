@@ -1,13 +1,15 @@
-#monthlyKit{
-margin-block: 15rem;
-text-align: center;
+#monthlyKit {
+  margin-block: 15rem;
+  text-align: center;
 
+  & header {
+    margin-bottom: 5rem;
+  }
 
- & header{
-   margin-bottom: 5rem;
-
-   &img{
-    background-color: black;
-   }
- }
+  & div {
+    display: flex;
+    flex-direction: column;
+    width: 467px;
+    height: 617px;
+  }
 }

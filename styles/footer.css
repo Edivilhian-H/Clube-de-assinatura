@@ -1,5 +1,73 @@
 footer {
   background: url(../assets/img/book-trace-background.png) no-repeat
     center/cover;
-  padding-top: 15px;
+  padding-block: 105px 100px;
+
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 160px;
+
+  & div:nth-child(1) {
+    & > img {
+      width: 264px;
+      height: 66px;
+    }
+
+    & .border {
+      width: 264px;
+      height: 1px;
+
+      background: var(--shape-shape-stroke, #002347);
+      margin-block: 12px;
+    }
+
+    & ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+
+      & li {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        padding: 8px;
+
+        border-radius: 50%;
+
+        & img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+
+  & div:nth-child(2) {
+    display: flex;
+    gap: 56px;
+
+    & ul {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      list-style: none;
+
+      & > li {
+        color: var(--text-body);
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+
+      & li a {
+        color: var(--blue-light);
+        text-align: right;
+
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+      }
+    }
+  }
 }
