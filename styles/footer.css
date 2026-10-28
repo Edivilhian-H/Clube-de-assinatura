@@ -27,18 +27,18 @@ footer {
       justify-content: space-between;
       gap: 8px;
 
-      & li {
+      & a {
         display: flex;
         width: 40px;
         height: 40px;
+        justify-content: center;
         align-items: center;
-        padding: 8px;
-
+        gap: 8px;
         border-radius: 50%;
+        transition: 0.5s;
 
-        & img {
-          width: 24px;
-          height: 24px;
+        &:hover {
+          background-color: var(--shape-stroke);
         }
       }
     }
@@ -67,6 +67,12 @@ footer {
         font-size: 14px;
         font-weight: 500;
         text-decoration: none;
+        transition: 0.4s;
+
+        &:hover {
+          color: var(--text-body);
+          text-align: right;
+        }
       }
     }
   }
