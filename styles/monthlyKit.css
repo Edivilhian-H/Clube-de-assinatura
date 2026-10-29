@@ -3,13 +3,89 @@
   text-align: center;
 
   & header {
-    margin-bottom: 5rem;
-  }
-
-  & div {
     display: flex;
     flex-direction: column;
-    width: 467px;
-    height: 617px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+
+    & h2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: var(--text-title);
+      text-align: center;
+
+      font-size: 32px;
+      font-weight: 700;
+
+      & img {
+        width: 72px;
+      }
+    }
+  }
+
+  & .animate-book {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    max-width: 1280px;
+    aspect-ratio: 1440 / 920;
+    margin-inline: auto;
+
+    &::before {
+      position: absolute;
+      z-index: 0;
+      inset: 0;
+      background: url("../assets/img/Book-Kit.png") no-repeat center / 100% 100%;
+      content: "";
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0.01);
+      transform-origin: 50.2% 47.2%;
+      transition:
+        opacity 1.2s ease,
+        transform 1.5s cubic-bezier(0.2, 1, 0.4, 1.02);
+    }
+
+    & img {
+      position: absolute;
+      z-index: 1;
+      top: 47.75%;
+      left: 49%;
+      width: 32.3%;
+      height: auto;
+      transform: translate(-50%, -50%);
+      transform-origin: 53.7% 48.7%;
+    }
+
+    &:hover::before,
+    &:focus-within::before {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #monthlyKit .animate-book {
+    aspect-ratio: 1;
+
+    &::before {
+      background-size: auto 100%;
+    }
+
+    & img {
+      top: 48.1%;
+      left: 48.4%;
+      width: 50.6%;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #monthlyKit .animate-book::before {
+    transition: none;
   }
 }
