@@ -22,7 +22,7 @@
             src="assets/logo-horizontal.svg"
             alt="Logo do Clube de Assinatura"
           />
-          <button class="btn btn-primary">Assinar</button>
+          <a class="btn btn-primary" href="#subscriptions">Assinar</a>
         </div>
       </header>
 
@@ -76,20 +76,61 @@
         <h2 class="title">Assinatura Encantos Literários</h2>
 
         <div class="cards">
-          <div class="card">
-            <img src="./assets/icons/Bunny.svg" alt="" />
-            <div>
+          <div class="card card-1">
+            <div class="card-star">
+              <img src="./assets/icons/star.svg" alt="" />
+              <img src="./assets/icons/star.svg" alt="" />
+            </div>
+
+            <div class="card-header">
+              <h3>Mensal</h3>
+            </div>
+
+            <div class="card-price">
+              <div>
+                <h2>R$ 59,90<span>/mês</span></h2>
+              </div>
+              <p>R$ 718,80 por ano</p>
+            </div>
+
+            <div class="card-benefits">
+              <ul>
+                <li>
+                  <img src="./assets/icons/star.svg" alt="" />Kit mensal com
+                  livro temático
+                </li>
+
+                <li>
+                  <img src="./assets/icons/star.svg" alt="" /> Broche e marca
+                  páginas exclusivo
+                </li>
+                <li>
+                  <img src="./assets/icons/star.svg" alt="" /> Acesso à
+                  comunidade literária
+                </li>
+              </ul>
+            </div>
+            <div class="card-action">
+              <button class="btn btn-primary">Assinar mensal</button>
+            </div>
+          </div>
+
+          <div class="card card-2">
+            <img class="card-icon" src="./assets/icons/Bunny.svg" alt="" />
+
+            <div class="card-header">
               <h3>Semestral</h3>
               <span>Popular</span>
             </div>
-            <div>
+
+            <div class="card-price">
               <div>
                 <h2>R$ 52,90<span>/mês</span></h2>
               </div>
               <p>R$ 634,80 por ano</p>
             </div>
 
-            <div>
+            <div class="card-benefits">
               <ul>
                 <li>
                   <img src="./assets/icons/star.svg" alt="" /> Kit mensal com
@@ -109,8 +150,54 @@
                 </li>
               </ul>
             </div>
-            <div>
+            <div class="card-action">
               <button class="btn btn-primary">Assinar semestral</button>
+            </div>
+          </div>
+
+          <div class="card card-3">
+            <div class="card-header">
+              <h3>Anual</h3>
+            </div>
+
+            <div class="card-price">
+              <div>
+                <h2>48,90<span>/mês</span></h2>
+              </div>
+              <p>R$ 586,80 por ano</p>
+            </div>
+
+            <div class="card-benefits">
+              <ul>
+                <li>
+                  <img src="./assets/icons/star.svg" alt="" />Kit mensal com
+                  livro temático
+                </li>
+
+                <li>
+                  <img src="./assets/icons/star.svg" alt="" /> Broche e marca
+                  páginas exclusivo
+                </li>
+                <li>
+                  <img src="./assets/icons/star.svg" alt="" /> Acesso à
+                  comunidade literária
+                </li>
+                <li>
+                  <img src="./assets/icons/star.svg" alt="" /> Membro premium do
+                  clube
+                </li>
+                <li>
+                  <img src="./assets/icons/star.svg" alt="" />Planner anual de
+                  leituras
+                </li>
+              </ul>
+            </div>
+            <div class="card-action">
+              <button class="btn btn-primary">Assinar anual</button>
+            </div>
+            <div class="card-star-bottom">
+              <img src="./assets/icons/star.svg" alt="" />
+              <img src="./assets/icons/star.svg" alt="" />
             </div>
           </div>
         </div>
@@ -122,37 +209,38 @@
         <img src="./assets/logo-horizontal.svg" alt="" />
         <div class="border"></div>
         <ul>
-          <l1>
+          <li>
             <a href="#">
               <img src="./assets/icons/instagram.svg" alt="" />
             </a>
-          </l1>
-          <l1>
+          </li>
+          <li>
             <a href="#">
               <img src="./assets/icons/twitter.svg" alt="" />
             </a>
-          </l1>
-          <l1>
+          </li>
+          <li>
             <a href="#">
               <img src="./assets/icons/facebook.svg" alt="" />
             </a>
-          </l1>
-          <l1>
+          </li>
+
+          <li>
             <a href="#">
               <img src="./assets/icons/discord.svg" alt="" />
             </a>
-          </l1>
+          </li>
 
-          <l1>
+          <li>
             <a href="#">
               <img src="./assets/icons/whatsapp.svg" alt="" />
             </a>
-          </l1>
-          <l1>
+          </li>
+          <li>
             <a href="#">
               <img src="./assets/icons/mail.svg" alt="" />
             </a>
-          </l1>
+          </li>
         </ul>
       </div>
 
@@ -172,5 +260,6 @@
         </ul>
       </div>
     </footer>
+
   </body>
 </html>

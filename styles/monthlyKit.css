@@ -69,11 +69,34 @@
 }
 
 @media (max-width: 767px) {
+  #monthlyKit {
+    margin-block: 4.5rem;
+    padding-inline: 0.5rem;
+  }
+
+  #monthlyKit header {
+    margin-bottom: 2rem;
+  }
+
+  #monthlyKit header h2 {
+    font-size: clamp(1.1rem, 5vw, 1.4rem);
+  }
+
+  #monthlyKit header h2 img {
+    width: 1.75rem;
+  }
+
+  #monthlyKit header p {
+    font-size: 0.75rem;
+  }
+
   #monthlyKit .animate-book {
     aspect-ratio: 1;
 
     &::before {
       background-size: auto 100%;
+      opacity: 1;
+      transform: scale(1);
     }
 
     & img {
@@ -81,6 +104,12 @@
       left: 48.4%;
       width: 50.6%;
     }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #monthlyKit {
+    margin-block: 9rem;
   }
 }
 
