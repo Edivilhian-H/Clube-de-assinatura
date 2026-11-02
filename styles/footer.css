@@ -77,3 +77,53 @@ footer {
     }
   }
 }
+
+@media (max-width: 767px) {
+  footer {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 1.5rem 2rem;
+  }
+
+  footer > div:first-child > img,
+  footer > div:first-child .border {
+    width: min(100%, 12rem);
+  }
+
+  footer > div:first-child > img {
+    height: auto;
+  }
+
+  footer > div:first-child ul {
+    justify-content: flex-start;
+    gap: 0.25rem;
+  }
+
+  footer > div:nth-child(2) {
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  footer > div:nth-child(2) ul {
+    gap: 0.5rem;
+  }
+
+  footer > div:nth-child(2) ul > li {
+    font-size: 0.875rem;
+  }
+
+  footer > div:nth-child(2) ul li a {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  footer {
+    padding-inline: 2rem;
+    gap: 2rem;
+  }
+
+  footer > div:nth-child(2) {
+    gap: 2rem;
+  }
+}

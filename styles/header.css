@@ -5,7 +5,7 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    & button {
+    & a {
       display: flex;
       height: 40px;
       padding: 0 20px;
@@ -15,8 +15,7 @@ header {
       border-radius: 8px;
       background: var(--pink-dark);
       outline: none;
-      border: none;
-      cursor: pointer;
+      text-decoration: none;
 
       color: var(--text-title);
       font-family: Raleway;
@@ -30,5 +29,23 @@ header {
         background: var(--pink-base);
       }
     }
+
+  }
+}
+
+@media (max-width: 767px) {
+  header > .container {
+    padding: 1.25rem 0 2rem;
+  }
+
+  header > .container > img {
+    width: 7rem;
+    height: auto;
+  }
+
+  header > .container a {
+    height: 2rem;
+    padding-inline: 0.875rem;
+    font-size: 0.75rem;
   }
 }

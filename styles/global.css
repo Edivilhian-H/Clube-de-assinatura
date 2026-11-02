@@ -47,12 +47,14 @@
 }
 
 html {
+  scroll-behavior: smooth;
   font-family: var(--ff-sans);
   font-weight: var(--fw-base);
   font-size: var(--fs-base);
   line-height: 1.4;
   color: var(--text-body);
 }
+
 
 body {
   background: var(--shape-background);
@@ -67,4 +69,22 @@ body {
 .img-bg {
   background: url("../assets/img/hero-background.png") no-repeat center/cover;
   height: 100vh;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: calc(100% - 2rem);
+  }
+
+  .img-bg {
+    height: auto;
+    padding-bottom: 2rem;
+    background-position: center top;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    width: calc(100% - 3rem);
+  }
 }
