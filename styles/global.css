@@ -55,7 +55,6 @@ html {
   color: var(--text-body);
 }
 
-
 body {
   background: var(--shape-background);
 }
@@ -71,20 +70,26 @@ body {
   height: 100vh;
 }
 
-@media (max-width: 767px) {
+.display-mobo {
+  display: none;
+}
+
+@media (width <= 40em) {
   .container {
     width: calc(100% - 2rem);
   }
 
-  .img-bg {
-    height: auto;
-    padding-bottom: 2rem;
-    background-position: center top;
+  .display-mobo {
+    display: block;
+  }
+
+  .display-desktop {
+    display: none;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .container {
-    width: calc(100% - 3rem);
+@media (width >= 80em) {
+  .display-desktop {
+    display: block;
   }
 }

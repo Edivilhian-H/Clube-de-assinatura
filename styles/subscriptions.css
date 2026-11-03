@@ -285,49 +285,63 @@
   }
 }
 
-@media (max-width: 1023px) {
+@media (width <= 40em) {
   #subscriptions {
     margin-block: 5rem 4rem;
-  }
 
-  #subscriptions .title {
-    width: auto;
-    max-width: 18rem;
-    margin: 0 auto 1rem;
-    padding-inline: 0.5rem;
-    font-size: 1.25rem;
-    line-height: 1.3;
-  }
+    & .title {
+      max-width: 18rem;
+      margin: 0 auto 1rem;
+      padding-inline: 0.5rem;
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
 
-  #subscriptions .cards {
-    min-height: 0;
-    margin-top: 0;
-    justify-content: flex-start;
-    gap: 1rem;
-    overflow-x: auto;
-    padding: 2rem max(1rem, calc((100vw - 288px) / 2)) 2.5rem;
-    scroll-padding-inline: max(1rem, calc((100vw - 288px) / 2));
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
+    & .cards {
+      min-height: 0;
+      margin-top: 0;
+      justify-content: flex-start;
+      gap: 1rem;
+      overflow-x: auto;
+      padding: 3rem max(2rem, calc((100vw - 288px) / 2)) 2.5rem;
+      scroll-padding-inline: max(1rem, calc((100vw - 288px) / 2));
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
 
-  #subscriptions .cards::-webkit-scrollbar {
-    display: none;
-  }
+    & .cards::-webkit-scrollbar {
+      display: none;
+    }
 
-  #subscriptions .card {
-    flex: 0 0 288px;
-    scroll-snap-align: center;
-  }
+    & .card {
+      flex: 0 0 288px;
+      scroll-snap-align: center;
 
-  #subscriptions .card-1,
-  #subscriptions .card-3 {
-    position: relative;
-    top: auto;
-    left: auto;
-    margin-left: 0;
-    transform: none;
-    animation: none;
+      & img{
+        display: none;
+      }
+    }
+
+    & .card-1,
+    & .card-2,
+    & .card-3 {
+      &:hover {
+        z-index: 0;
+        scale: 1;
+        background: var(--shape-hover);
+        box-shadow: 0px 0px 10px var(--pink-base);
+      }
+    }
+
+    & .card-1,
+    & .card-3 {
+      position: relative;
+      top: auto;
+      left: auto;
+      margin-left: 0;
+      transform: none;
+      animation: none;
+    }
   }
 }

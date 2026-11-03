@@ -4,7 +4,7 @@
   & div {
     max-width: 41.5rem;
   }
-  
+
   & h1 {
     font-size: 3rem;
     font-weight: 800;
@@ -21,22 +21,18 @@
   }
 }
 
-@media (max-width: 767px) {
-  #hero > .container {
-    padding-inline: 0.5rem;
-  }
+@media (width <= 40em) {
+  #hero {
+    & .container {
+      padding-inline: 0.5rem;
+    }
 
-  #hero h1 {
-    max-width: 22rem;
-    margin: 0 auto 0.75rem;
-    font-size: clamp(1.5rem, 7vw, 2rem);
-    line-height: 1.2;
-  }
+    & h1 {
+      font-size: 28px;
+    }
 
-  #hero p {
-    max-width: 22rem;
-    margin: 0 auto;
-    font-size: 0.875rem;
-    line-height: 1.5;
+    & p {
+      font-size: 14px;
+    }
   }
 }

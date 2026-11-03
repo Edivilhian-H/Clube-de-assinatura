@@ -26,6 +26,7 @@ footer {
       align-items: center;
       justify-content: space-between;
       gap: 8px;
+      list-style: none;
 
       & a {
         display: flex;
@@ -78,52 +79,56 @@ footer {
   }
 }
 
-@media (max-width: 767px) {
+@media (width <= 40em) {
   footer {
+    text-align: center;
     flex-direction: column;
-    gap: 2rem;
-    padding: 4rem 1.5rem 2rem;
-  }
+    align-items: center;
+    justify-content: center;
+    padding-inline: 20px;
 
-  footer > div:first-child > img,
-  footer > div:first-child .border {
-    width: min(100%, 12rem);
-  }
 
-  footer > div:first-child > img {
-    height: auto;
-  }
+    & div:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-  footer > div:first-child ul {
-    justify-content: flex-start;
-    gap: 0.25rem;
-  }
+      & > img {
+        width: 158.621px;
+        height: 40px;
+      }
+    }
 
-  footer > div:nth-child(2) {
-    justify-content: space-between;
-    gap: 1rem;
-  }
+    & div:nth-child(2) {
+      width: 100%;
+      margin-top: 40px;
+      align-items: center;
+      justify-content: center;
 
-  footer > div:nth-child(2) ul {
-    gap: 0.5rem;
-  }
+      & ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        justify-content: space-between;
+        align-items: flex-start;
 
-  footer > div:nth-child(2) ul > li {
-    font-size: 0.875rem;
-  }
+        & > li {
+          font-size: 14px;
+          text-align: left;
+          white-space: nowrap;
+        }
 
-  footer > div:nth-child(2) ul li a {
-    font-size: 0.75rem;
-  }
-}
+        & li a {
+          font-size: 14px;
+          font-weight: 500;
+          text-align: left;
+          white-space: nowrap;
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  footer {
-    padding-inline: 2rem;
-    gap: 2rem;
-  }
-
-  footer > div:nth-child(2) {
-    gap: 2rem;
+          &:hover {
+            text-align: left;
+          }
+        }
+      }
+    }
   }
 }

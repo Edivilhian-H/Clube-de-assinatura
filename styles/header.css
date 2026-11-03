@@ -29,21 +29,27 @@ header {
         background: var(--pink-base);
       }
     }
-
   }
 }
 
-@media (max-width: 767px) {
-  header > .container {
+@media (width <= 40em) {
+  header & > div {
     padding: 1.25rem 0 2rem;
   }
 
-  header > .container > img {
-    width: 7rem;
-    height: auto;
+  & .container {
+    padding: 1.25rem 0 2rem;
   }
 
-  header > .container a {
+  & .logo-mb {
+    display: block;
+  }
+
+  & .logo-desktop {
+    display: none;
+  }
+
+  & a {
     height: 2rem;
     padding-inline: 0.875rem;
     font-size: 0.75rem;
