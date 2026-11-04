@@ -15,31 +15,75 @@
       rotate: 20deg;
     }
 
-    & > img,
-    & div:nth-child(3) img {
-      transition: transform 350ms ease;
-
-      &:hover {
-        animation: image-hover 400ms ease-out forwards;
-      }
-    }
-
     & div:nth-child(2) {
       display: flex;
       justify-content: center;
       align-items: center;
 
       & p {
-        font-size: 32px;
+        font-size: 2rem;
         line-height: 200%;
+        opacity: 0.45;
+        transition: opacity 350ms ease;
+
+        & span {
+          opacity: 0.45;
+          transform: translateY(0.4rem);
+          transition: opacity 350ms ease, transform 350ms ease;
+        }
       }
 
       & span {
-        font-size: 32px;
+        
+        font-size: 2rem;
         line-height: 200%;
         color: var(--blue-light);
         display: inline-block;
       }
+    }
+
+    &:hover > div:nth-child(2) p {
+      opacity: 1;
+    }
+
+    &:hover > div:nth-child(2) span {
+      animation: reveal-copy 450ms ease-out both;
+    }
+
+    &:hover > div:nth-child(2) span:nth-of-type(1) {
+      animation-delay: 150ms;
+    }
+
+    &:hover > div:nth-child(2) span:nth-of-type(2) {
+      animation-delay: 550ms;
+    }
+
+    &:hover > div:nth-child(2) span:nth-of-type(3) {
+      animation-delay: 950ms;
+    }
+
+    & > img,
+    & > div:nth-child(3) img {
+      opacity: 0;
+      transform: scale(0.75);
+      transition: opacity 350ms ease, transform 350ms ease;
+    }
+
+    &:hover > img,
+    &:hover > div:nth-child(3) img {
+      animation: reveal-image 450ms ease-out both;
+    }
+
+    &:hover > img {
+      animation-delay: 1.35s;
+    }
+
+    &:hover > div:nth-child(3) img:nth-child(1) {
+      animation-delay: 1.75s;
+    }
+
+    &:hover > div:nth-child(3) img:nth-child(2) {
+      animation-delay: 2.15s;
     }
 
     & div:nth-child(3) {
@@ -67,8 +111,8 @@
 
 @keyframes reveal-copy {
   0% {
-    opacity: 0;
-    transform: translateY(1rem);
+    opacity: 0.45;
+    transform: translateY(0.4rem);
   }
 
   100% {
@@ -77,13 +121,15 @@
   }
 }
 
-@keyframes image-hover {
+@keyframes reveal-image {
   from {
-    transform: scale(1) rotate(0deg);
+    opacity: 0;
+    transform: scale(0.75);
   }
 
   to {
-    transform: scale(1.1) rotate(-8deg);
+    opacity: 1;
+    transform: scale(1);
   }
 }
 

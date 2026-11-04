@@ -1,40 +1,40 @@
 footer {
-  background: url(../assets/img/book-trace-background.png) no-repeat
+  background: url(../assets/img/book-background-dst.png) no-repeat
     center/cover;
-  padding-block: 105px 100px;
+  padding-block: 6.5625rem 6.25rem;
 
   display: flex;
   justify-content: space-between;
-  padding-inline: 160px;
+  padding-inline: 10rem;
 
   & div:nth-child(1) {
     & > img {
-      width: 264px;
-      height: 66px;
+      width: 16.5rem;
+      height: 4.125rem;
     }
 
     & .border {
-      width: 264px;
-      height: 1px;
+      width: 16.5rem;
+      height: 0.0625rem;
 
       background: var(--shape-shape-stroke, #002347);
-      margin-block: 12px;
+      margin-block: 0.75rem;
     }
 
     & ul {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 8px;
+      gap: 0.5rem;
       list-style: none;
 
       & a {
         display: flex;
-        width: 40px;
-        height: 40px;
+        width: 2.5rem;
+        height: 2.5rem;
         justify-content: center;
         align-items: center;
-        gap: 8px;
+        gap: 0.5rem;
         border-radius: 50%;
         transition: 0.5s;
 
@@ -47,25 +47,25 @@ footer {
 
   & div:nth-child(2) {
     display: flex;
-    gap: 56px;
+    gap: 3.5rem;
 
     & ul {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 0.75rem;
       list-style: none;
 
       & > li {
         color: var(--text-body);
-        font-size: 16px;
-        margin-bottom: 8px;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
       }
 
       & li a {
         color: var(--blue-light);
         text-align: right;
 
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 500;
         text-decoration: none;
         transition: 0.4s;
@@ -81,12 +81,13 @@ footer {
 
 @media (width <= 40em) {
   footer {
+    background: url(../assets/img/book-background-mobo.png) no-repeat
+      center/cover;
     text-align: center;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-inline: 20px;
-
+    padding-inline: 1.25rem;
 
     & div:nth-child(1) {
       display: flex;
@@ -94,32 +95,32 @@ footer {
       align-items: center;
 
       & > img {
-        width: 158.621px;
-        height: 40px;
+        width: 9.9138125rem;
+        height: 2.5rem;
       }
     }
 
     & div:nth-child(2) {
       width: 100%;
-      margin-top: 40px;
+      margin-top: 2.5rem;
       align-items: center;
       justify-content: center;
 
       & ul {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 0.5rem;
         justify-content: space-between;
         align-items: flex-start;
 
         & > li {
-          font-size: 14px;
+          font-size: 0.875rem;
           text-align: left;
           white-space: nowrap;
         }
 
         & li a {
-          font-size: 14px;
+          font-size: 0.875rem;
           font-weight: 500;
           text-align: left;
           white-space: nowrap;
