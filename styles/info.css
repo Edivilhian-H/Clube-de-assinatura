@@ -146,9 +146,42 @@
         width: 3.75rem;
       }
 
+      & > img,
+      & > div:nth-child(3) img {
+        opacity: 1;
+        transform: none;
+        animation: none;
+      }
+
       & > div:nth-child(2) {
         padding-inline: 1.5rem;
+
+        
       }
+
+      & > div:nth-child(2) p {
+        opacity: 1;
+      }
+
+      & > div:nth-child(2) p span {
+        opacity: 1;
+        transform: none;
+        animation: none;
+      }
+
+      &:hover > div:nth-child(2) p {
+        opacity: 1;
+      }
+
+      &:hover > div:nth-child(2) p span {
+        animation: none;
+      }
+
+      &:hover > img,
+      &:hover > div:nth-child(3) img {
+        animation: none;
+      }
+
       & > div:nth-child(2) p,
       & > div:nth-child(2) span {
         font-size: 1rem;
